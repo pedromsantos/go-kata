@@ -1,0 +1,132 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test All",
+      "type": "shell",
+      "command": "go test ./...",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Test Current Package",
+      "type": "shell",
+      "command": "go test -v ${fileDirname}/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Test with Coverage",
+      "type": "shell",
+      "command": "go test -cover ./...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Format Code",
+      "type": "shell",
+      "command": "go fmt ./...",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vet Code",
+      "type": "shell",
+      "command": "go vet ./...",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "FizzBuzz",
+      "type": "shell",
+      "command": "go test -v ./01_fizzbuzz/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Leap Year",
+      "type": "shell",
+      "command": "go test -v ./02_leapyear/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Fibonacci",
+      "type": "shell",
+      "command": "go test -v ./03_fibonacci/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Stack",
+      "type": "shell",
+      "command": "go test -v ./04_stack/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Roman Numerals",
+      "type": "shell",
+      "command": "go test -v ./05_romannumerals/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Prime Factors",
+      "type": "shell",
+      "command": "go test -v ./06_primefactors/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Tic Tac Toe",
+      "type": "shell",
+      "command": "go test -v ./07_tictactoe/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Yahtzee",
+      "type": "shell",
+      "command": "go test -v ./08_yahtzee/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Mars Rover",
+      "type": "shell",
+      "command": "go test -v ./09_marsrover/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Tennis",
+      "type": "shell",
+      "command": "go test -v ./10_tennis/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Gilded Rose",
+      "type": "shell",
+      "command": "go test -v ./11_gildedrose/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Refactoring Golf",
+      "type": "shell",
+      "command": "go test -v ./12_refactoringgolf/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Smelly Tic Tac Toe",
+      "type": "shell",
+      "command": "go test -v ./13_smellytictactoe/...",
+      "group": "test",
+      "problemMatcher": ["$go"]
+    }
+  ]
+}
