@@ -17,8 +17,6 @@ updates:
     labels:
       - "dependencies"
       - "go"
-    reviewers:
-      - "pedromsantos"
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
