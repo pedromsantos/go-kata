@@ -3,7 +3,7 @@ module github.com/pedromsantos/go-kata
 go 1.21
 
 require (
-	github.com/approvals/go-approval-tests v0.0.0-20240417152556-434b9105e958
+	github.com/approvals/go-approval-tests v1.8.0
 	github.com/stretchr/testify v1.9.0
 	pgregory.net/rapid v1.1.0
 )
