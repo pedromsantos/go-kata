@@ -2,7 +2,7 @@
 # Run 'make help' to see available commands
 
 .PHONY: help test watch coverage lint fmt vet build clean install-tools mutants
-.PHONY: fizz leap fib stack roman prime tic yahtzee mars tennis rose golf smelly
+.PHONY: fizz leap stats anagrams fib stack roman prime tic yahtzee mars tennis rose golf smelly
 .PHONY: copier tac esa cart social katacombs
 .PHONY: golf1 golf2 golf3 golf4 golf5 golf6 golf7 golf8 golf9 golf10 golf11 golf12 golf13
 
@@ -23,6 +23,8 @@ help: ## Show this help message
 	@echo "Individual Kata Tests:"
 	@echo "  $(CYAN)fizz$(RESET)        FizzBuzz"
 	@echo "  $(CYAN)leap$(RESET)        Leap Year"
+	@echo "  $(CYAN)stats$(RESET)       Stats Calculator"
+	@echo "  $(CYAN)anagrams$(RESET)    Anagrams"
 	@echo "  $(CYAN)fib$(RESET)         Fibonacci"
 	@echo "  $(CYAN)stack$(RESET)       Stack"
 	@echo "  $(CYAN)roman$(RESET)       Roman Numerals"
@@ -112,7 +114,11 @@ fizz: ## Test FizzBuzz
 
 leap: ## Test Leap Year
 	go test -v ./02_leapyear/...
+stats: ## Test Stats Calculator
+	go test -v ./03_statscalculator/...
 
+anagrams: ## Test Anagrams
+	go test -v ./04_anagrams/...
 fib: ## Test Fibonacci
 	go test -v ./03_fibonacci/...
 
@@ -159,10 +165,10 @@ cart: ## Test Shopping Cart
 	go test -v ./17_shoppingcart/...
 
 social: ## Test Social Network
-	go test -v ./18_socialnetwork/...
+	go test -v ./20_socialnetwork/...
 
 katacombs: ## Test Katacombs
-	go test -v ./19_katacombs/...
+	go test -v ./21_katacombs/...
 
 # ============================================================================
 # Refactoring Golf Individual Holes
@@ -206,19 +212,3 @@ golf12:
 
 golf13:
 	go test -v ./12_refactoringgolf/hole13/...
-
-# ============================================================================
-# Watch Individual Katas (requires entr)
-# ============================================================================
-
-watch-fizz:
-	@find ./01_fizzbuzz -name "*.go" | entr -c go test -v ./01_fizzbuzz/...
-
-watch-leap:
-	@find ./02_leapyear -name "*.go" | entr -c go test -v ./02_leapyear/...
-
-watch-fib:
-	@find ./03_fibonacci -name "*.go" | entr -c go test -v ./03_fibonacci/...
-
-watch-rose:
-	@find ./11_gildedrose -name "*.go" | entr -c go test -v ./11_gildedrose/...
