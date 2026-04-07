@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/approvals/go-approval-tests v1.9.1
 	github.com/stretchr/testify v1.11.1
-	pgregory.net/rapid v1.1.0
+	pgregory.net/rapid v1.2.0
 )
 
 require (
