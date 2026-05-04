@@ -1,11 +1,11 @@
 module github.com/pedromsantos/go-kata
 
-go 1.21
+go 1.23
 
 require (
 	github.com/approvals/go-approval-tests v1.10.0
 	github.com/stretchr/testify v1.11.1
-	pgregory.net/rapid v1.2.0
+	pgregory.net/rapid v1.3.0
 )
 
 require (
