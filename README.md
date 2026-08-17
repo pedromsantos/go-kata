@@ -164,25 +164,30 @@ make install-tools # Install dev tools
 ### Individual Kata Tests
 
 ```bash
-make fizz      # FizzBuzz
-make leap      # Leap Year
-make fib       # Fibonacci
-make stack     # Stack
-make roman     # Roman Numerals
-make prime     # Prime Factors
-make tic       # Tic Tac Toe
-make yahtzee   # Yahtzee
-make mars      # Mars Rover
-make tennis    # Tennis Refactoring
-make rose      # Gilded Rose
-make golf      # All Refactoring Golf
-make smelly    # Smelly Tic Tac Toe
-make copier    # Character Copier
-make tac       # Tic Tac Toe (output)
-make esa       # ESA Mars Rover
-make cart      # Shopping Cart
-make social    # Social Network
-make katacombs # Katacombs
+make fizz       # FizzBuzz
+make leap       # Leap Year
+make stats      # Stats Calculator
+make anagrams   # Anagrams
+make fib        # Fibonacci
+make stack      # Stack
+make roman      # Roman Numerals
+make prime      # Prime Factors
+make tic        # Tic Tac Toe
+make yahtzee    # Yahtzee
+make mars       # Mars Rover
+make tennis     # Tennis Refactoring
+make rose       # Gilded Rose
+make golf       # All Refactoring Golf
+make smelly     # Smelly Tic Tac Toe
+make copier     # Character Copier
+make tac        # Tic Tac Toe (output)
+make esa        # ESA Mars Rover
+make cart       # Shopping Cart
+make social     # Social Network
+make katacombs  # Katacombs
+make smellymars # Smelly Mars Rover
+make smellycart # Smelly Shopping Cart
+make smellyyahtzee # Smelly Yahtzee
 ```
 
 ### Refactoring Golf Holes
@@ -223,27 +228,32 @@ go vet ./...
 
 ## Katas
 
-| #   | Kata                                   | Description                   | Difficulty   |
-| --- | -------------------------------------- | ----------------------------- | ------------ |
-| 01  | [FizzBuzz](01_fizzbuzz/)               | Classic TDD starter           | Beginner     |
-| 02  | [LeapYear](02_leapyear/)               | Date validation logic         | Beginner     |
-| 03  | [Fibonacci](03_fibonacci/)             | Sequence generation           | Beginner     |
-| 04  | [Stack](04_stack/)                     | Data structure implementation | Beginner     |
-| 05  | [RomanNumerals](05_romannumerals/)     | Number conversion             | Intermediate |
-| 06  | [PrimeFactors](06_primefactors/)       | Mathematical decomposition    | Intermediate |
-| 07  | [TicTacToe](07_tictactoe/)             | Game logic with OOP           | Intermediate |
-| 08  | [Yahtzee](08_yahtzee/)                 | Scoring system                | Intermediate |
-| 09  | [MarsRover](09_marsrover/)             | Command pattern & state       | Advanced     |
-| 10  | [Tennis](10_tennis/)                   | Refactoring kata              | Advanced     |
-| 11  | [GildedRose](11_gildedrose/)           | Legacy code & testing         | Advanced     |
-| 12  | [RefactoringGolf](12_refactoringgolf/) | Progressive refactoring holes | Advanced     |
-| 13  | [SmellyTicTacToe](13_smellytictactoe/) | Code smells identification    | Advanced     |
-| 14  | [CharacterCopier](14_charactercopier/) | Mocking & test doubles        | Intermediate |
-| 15  | [TicTacToe (Output)](15_tictactoe/)    | Game with output interface    | Intermediate |
-| 16  | [ESA MarsRover](16_esamarsrover/)      | Multilingual rover with radio | Advanced     |
-| 17  | [ShoppingCart](17_shoppingcart/)       | DDD & Hexagonal architecture  | Advanced     |
-| 18  | [SocialNetwork](18_socialnetwork/)     | Use case driven development   | Advanced     |
-| 19  | [Katacombs](19_katacombs/)             | Text adventure game           | Advanced     |
+| #   | Kata                                          | Description                               | Difficulty   |
+| --- | ---------------------------------------------- | ------------------------------------------ | ------------ |
+| 01  | [FizzBuzz](01_fizzbuzz/)                      | Classic TDD starter                       | Beginner     |
+| 02  | [LeapYear](02_leapyear/)                      | Date validation logic                     | Beginner     |
+| 03  | [StatsCalculator](03_statscalculator/)        | Statistical calculations on a sequence    | Beginner     |
+| 04  | [Anagrams](04_anagrams/)                      | Anagram generation                        | Beginner     |
+| 05  | [Fibonacci](05_fibonacci/)                    | Sequence generation                       | Beginner     |
+| 06  | [Stack](06_stack/)                            | Data structure implementation             | Beginner     |
+| 07  | [RomanNumerals](07_romannumerals/)            | Number conversion                         | Intermediate |
+| 08  | [PrimeFactors](08_primefactors/)              | Mathematical decomposition                | Intermediate |
+| 09  | [TicTacToe](09_tictactoe/)                    | Game logic with OOP                       | Intermediate |
+| 10  | [Yahtzee](10_yahtzee/)                        | Scoring system                            | Intermediate |
+| 11  | [MarsRover](11_marsrover/)                    | Command pattern & state                   | Advanced     |
+| 12  | [Tennis](12_tennis/)                          | Refactoring kata                          | Advanced     |
+| 13  | [GildedRose](13_gildedrose/)                  | Legacy code & testing                     | Advanced     |
+| 14  | [RefactoringGolf](14_refactoringgolf/)        | Progressive refactoring holes             | Advanced     |
+| 15  | [SmellyTicTacToe](15_smellytictactoe/)        | Code smells identification                | Advanced     |
+| 16  | [CharacterCopier](16_charactercopier/)        | Mocking & test doubles                    | Intermediate |
+| 17  | [TicTacToe (Output)](17_tictactoe/)           | Game with output interface                | Intermediate |
+| 18  | [ESA MarsRover](18_esamarsrover/)             | Multilingual rover with radio             | Advanced     |
+| 19  | [ShoppingCart](19_shoppingcart/)              | DDD & Hexagonal architecture              | Advanced     |
+| 20  | [SocialNetwork](20_socialnetwork/)            | Use case driven development               | Advanced     |
+| 21  | [Katacombs](21_katacombs/)                    | Text adventure game                       | Advanced     |
+| 22  | [SmellyMarsRover](22_smellymarsrover/)        | Legacy code & test smells fixture         | Advanced     |
+| 23  | [SmellyShoppingCart](23_smellyshoppingcart/)  | Hexagonal ports & adapters smells fixture | Advanced     |
+| 25  | [SmellyYahtzee](25_smellyyahtzee/)            | Legacy code & test smells fixture (dice)  | Advanced     |
 
 ## TDD Rules
 
