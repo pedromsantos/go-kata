@@ -85,4 +85,62 @@ func TestGame(t *testing.T) {
 			t.Errorf("expected X to win, got '%s'", winner)
 		}
 	})
+
+	t.Run("X should win with a column", func(t *testing.T) {
+		game := NewGame()
+		game.Play("X", 0, 0)
+		game.Play("O", 0, 1)
+		game.Play("X", 1, 0)
+		game.Play("O", 1, 1)
+		game.Play("X", 2, 0)
+
+		winner := game.Winner()
+		if winner != "X" {
+			t.Errorf("expected X to win, got '%s'", winner)
+		}
+	})
+
+	t.Run("O should win with a column", func(t *testing.T) {
+		game := NewGame()
+		game.Play("X", 0, 1)
+		game.Play("O", 0, 0)
+		game.Play("X", 1, 1)
+		game.Play("O", 1, 0)
+		game.Play("X", 0, 2)
+		game.Play("O", 2, 0)
+
+		winner := game.Winner()
+		if winner != "O" {
+			t.Errorf("expected O to win, got '%s'", winner)
+		}
+	})
+
+	t.Run("X should win with a diagonal", func(t *testing.T) {
+		game := NewGame()
+		game.Play("X", 0, 0)
+		game.Play("O", 0, 1)
+		game.Play("X", 1, 1)
+		game.Play("O", 1, 0)
+		game.Play("X", 2, 2)
+
+		winner := game.Winner()
+		if winner != "X" {
+			t.Errorf("expected X to win, got '%s'", winner)
+		}
+	})
+
+	t.Run("O should win with the anti-diagonal", func(t *testing.T) {
+		game := NewGame()
+		game.Play("X", 0, 1)
+		game.Play("O", 0, 2)
+		game.Play("X", 0, 0)
+		game.Play("O", 1, 1)
+		game.Play("X", 1, 0)
+		game.Play("O", 2, 0)
+
+		winner := game.Winner()
+		if winner != "O" {
+			t.Errorf("expected O to win, got '%s'", winner)
+		}
+	})
 }

@@ -4,6 +4,20 @@
 
 This kata contains a deliberately "smelly" implementation of TicTacToe that needs refactoring. Your goal is to identify and fix various code smells while maintaining functionality.
 
+The implementation is split across five files (`game.go`, `board.go`,
+`row_winner_checker.go`, `column_winner_checker.go`,
+`diagonal_winner_checker.go`) specifically so the cross-file smells below
+(Shotgun Surgery, Duplicated Code, Divergent Change) are genuinely
+cross-file, not just repeated logic within one file — this also makes
+the kata a verification fixture for
+[jev-review](https://github.com/pedromsantos/jev-review)'s module-level
+rules. `RowWinnerChecker`, `ColumnWinnerChecker`, and
+`DiagonalWinnerChecker` each independently re-implement the exact same
+"are these three tiles taken and equal" matching logic (rows, columns,
+and both diagonals are all checked); `Game` is the file that would need
+editing for several unrelated reasons (move-validation rules, wiring in
+a new line-checking strategy).
+
 ## Code Smells to Look For
 
 The implementation contains the following code smells:
@@ -29,16 +43,28 @@ The implementation contains the following code smells:
 7. **Long Parameter List**
    - Functions with too many parameters
 
-8. **Duplicated Code**
-   - Row-checking logic is repeated three times
+8. **Shotgun Surgery**
+   - Changes requiring multiple small edits across many files — e.g. a change to
+     the matching rule in `RowWinnerChecker`/`ColumnWinnerChecker`/`DiagonalWinnerChecker`
+     needs editing all three files to stay consistent
 
-9. **Large Struct**
-   - Structs with too many responsibilities
+9. **Duplicated Code**
+   - The "are these three tiles taken and equal" matching logic is repeated,
+     independently, across `RowWinnerChecker`, `ColumnWinnerChecker`, and
+     `DiagonalWinnerChecker`
 
-10. **Data Clump**
+10. **Large Struct**
+    - Structs with too many responsibilities
+
+11. **Divergent Change**
+    - `Game` changes for multiple unrelated reasons — move-validation rule
+      changes, wiring in a new line-checking strategy, and orchestration
+      changes
+
+12. **Data Clump**
     - `x` and `y` coordinates always appear together
 
-11. **Dead Code**
+13. **Dead Code**
     - Unused code that should be removed
 
 ## Tasks
