@@ -4,6 +4,7 @@
 .PHONY: help test watch coverage lint fmt vet build clean install-tools mutants
 .PHONY: fizz leap stats anagrams fib stack roman prime tic yahtzee mars tennis rose golf smelly
 .PHONY: copier tac esa cart social katacombs smellymars smellycart smellyyahtzee
+.PHONY: smellysolid smellyconnascence
 .PHONY: golf1 golf2 golf3 golf4 golf5 golf6 golf7 golf8 golf9 golf10 golf11 golf12 golf13
 
 # Default target
@@ -45,6 +46,8 @@ help: ## Show this help message
 	@echo "  $(CYAN)smellymars$(RESET)  Smelly Mars Rover"
 	@echo "  $(CYAN)smellycart$(RESET)  Smelly Shopping Cart"
 	@echo "  $(CYAN)smellyyahtzee$(RESET) Smelly Yahtzee"
+	@echo "  $(CYAN)smellysolid$(RESET) Smelly SOLID"
+	@echo "  $(CYAN)smellyconnascence$(RESET) Smelly Connascence"
 	@echo ""
 	@echo "Refactoring Golf Holes:"
 	@echo "  $(CYAN)golf1-13$(RESET)    Individual holes (e.g., make golf1)"
@@ -181,6 +184,12 @@ smellycart: ## Test Smelly Shopping Cart
 
 smellyyahtzee: ## Test Smelly Yahtzee
 	go test -v ./25_smellyyahtzee/...
+
+smellysolid: ## Test Smelly SOLID
+	go test -v ./26_smellysolid/...
+
+smellyconnascence: ## Test Smelly Connascence
+	go test -v ./27_smellyconnascence/...
 
 # ============================================================================
 # Refactoring Golf Individual Holes
