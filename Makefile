@@ -3,7 +3,7 @@
 
 .PHONY: help test watch coverage lint fmt vet build clean install-tools mutants
 .PHONY: fizz leap stats anagrams fib stack roman prime tic yahtzee mars tennis rose golf smelly
-.PHONY: copier tac esa cart social katacombs smellymars smellycart smellyyahtzee
+.PHONY: copier tac esa cart social smellymars smellycart smellyyahtzee
 .PHONY: smellysolid smellyconnascence
 .PHONY: golf1 golf2 golf3 golf4 golf5 golf6 golf7 golf8 golf9 golf10 golf11 golf12 golf13
 
@@ -42,7 +42,6 @@ help: ## Show this help message
 	@echo "  $(CYAN)esa$(RESET)         ESA Mars Rover"
 	@echo "  $(CYAN)cart$(RESET)        Shopping Cart"
 	@echo "  $(CYAN)social$(RESET)      Social Network"
-	@echo "  $(CYAN)katacombs$(RESET)   Katacombs"
 	@echo "  $(CYAN)smellymars$(RESET)  Smelly Mars Rover"
 	@echo "  $(CYAN)smellycart$(RESET)  Smelly Shopping Cart"
 	@echo "  $(CYAN)smellyyahtzee$(RESET) Smelly Yahtzee"
@@ -172,9 +171,6 @@ cart: ## Test Shopping Cart
 
 social: ## Test Social Network
 	go test -v ./20_socialnetwork/...
-
-katacombs: ## Test Katacombs
-	go test -v ./21_katacombs/...
 
 smellymars: ## Test Smelly Mars Rover
 	go test -v ./22_smellymarsrover/...

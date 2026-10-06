@@ -184,7 +184,6 @@ make tac        # Tic Tac Toe (output)
 make esa        # ESA Mars Rover
 make cart       # Shopping Cart
 make social     # Social Network
-make katacombs  # Katacombs
 make smellymars # Smelly Mars Rover
 make smellycart # Smelly Shopping Cart
 make smellyyahtzee # Smelly Yahtzee
